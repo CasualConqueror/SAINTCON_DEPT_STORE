@@ -1,0 +1,141 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SAINTCON1</Name>
+    <RootNamespace>SAINTCON1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a5f212db-bca0-4afd-9095-9983b8215ce1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="HTMLPage1 - Copy.html" />
+    <Content Include="Images\10x10-Matrix-No-Box.png" />
+    <Content Include="Images\2022PatchLockPick.jpeg" />
+    <Content Include="Images\2022PatchScavHunt.jpeg" />
+    <Content Include="Images\2022SCBeenieWhite.png" />
+    <Content Include="Images\2022SCshotglass.jpeg" />
+    <Content Include="Images\ci-arbiterbypass.jpeg" />
+    <Content Include="Images\CI-ConvertableCrossPick.png" />
+    <Content Include="Images\ci-covertcompanion.jpeg" />
+    <Content Include="Images\ci-covertlubular.jpeg" />
+    <Content Include="Images\ci-decoders.jpeg" />
+    <Content Include="Images\CI-EasyLoaderReverseGrip.png" />
+    <Content Include="Images\CI-EchelonPickSet.png" />
+    <Content Include="Images\CI-EntrySpecialistBundle.png" />
+    <Content Include="Images\CI-ErgoCombs.png" />
+    <Content Include="Images\ci-fng.jpeg" />
+    <Content Include="Images\CI-LichiAM5.jpeg" />
+    <Content Include="Images\CI-LichiKW1.jpeg" />
+    <Content Include="Images\CI-LichiSC1.jpeg" />
+    <Content Include="Images\CI-LichiSC4.jpeg" />
+    <Content Include="Images\ci-lishi-kw5.jpeg" />
+    <Content Include="Images\ci-lishi-sc20.jpeg" />
+    <Content Include="Images\CI-LockboxHingeTool.png" />
+    <Content Include="Images\ci-lockbumpkit.jpeg" />
+    <Content Include="Images\CI-LrnLPBun.jpeg" />
+    <Content Include="Images\CI-NightOpsPatch.png" />
+    <Content Include="Images\CI-PadShims.jpeg" />
+    <Content Include="Images\CI-PracticeLock.png" />
+    <Content Include="Images\CI-PVCPinningPatch.png" />
+    <Content Include="Images\ci-quadcomb.jpeg" />
+    <Content Include="Images\CI-Replicant.png" />
+    <Content Include="Images\CI-SlimPickings.png" />
+    <Content Include="Images\CI-SSFDIMPLERAKE.png" />
+    <Content Include="Images\CI-SSFPadlockBypassDriver.png" />
+    <Content Include="Images\CI-TSAKeySet.png" />
+    <Content Include="Images\CI-TubularPracticeLock.png" />
+    <Content Include="Images\CI-WardedPickSet.png" />
+    <Content Include="Images\DesolderWickSolderSuck.jpeg" />
+    <Content Include="Images\ice-chameleonultra.jpeg" />
+    <Content Include="Images\ice-proxmark3.jpeg" />
+    <Content Include="Images\JL-015Flathooks.png" />
+    <Content Include="Images\JL-015RoundHooks.png" />
+    <Content Include="Images\JL-022basicset.png" />
+    <Content Include="Images\Jl-022starter.png" />
+    <Content Include="Images\JL-inter018v4.png" />
+    <Content Include="Images\jl-role.png" />
+    <Content Include="Images\PrecisionLockTweezers.jpeg" />
+    <Content Include="Images\SAINTCON23BLtee.jpg" />
+    <Content Include="Images\SAINTCON23LogoPatch.jpeg" />
+    <Content Include="Images\SC22conbadge.jpg" />
+    <Content Include="Images\SC23BadgeLifePatch.jpeg" />
+    <Content Include="Images\SC23conbadge.jpg" />
+    <Content Include="Images\SC23Hoodie.jpeg" />
+    <Content Include="Images\SC23kidspack.jpg" />
+    <Content Include="Images\SC24Hoodie.png" />
+    <Content Include="Images\SC24_AppSec_Patch.png" />
+    <Content Include="Images\SC24_HC_Patch.png" />
+    <Content Include="Images\SC24_Keep_Patch.png" />
+    <Content Include="Images\Smart65W-Soldering-Iron.jpeg" />
+    <Content Include="Images\SnipsBlue.jpeg" />
+    <Content Include="Images\SolderFluxPen.jpeg" />
+    <Content Include="Images\SolderMat30x20cm.jpeg" />
+    <Content Include="Images\TactBagSmall.jpg" />
+    <Content Include="Images\tinfoilhat.jpeg" />
+    <Content Include="server.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

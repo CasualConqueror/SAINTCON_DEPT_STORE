@@ -1,0 +1,17 @@
+{
+  "name": "saintcon1",
+  "version": "0.0.0",
+  "description": "SAINTCON1",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "exp": "^55.0.5",
+    "express": "^4.21.1"
+  }
+}

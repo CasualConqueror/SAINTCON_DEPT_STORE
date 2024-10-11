@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .product-display {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="product-display">
+        <img id="productImage" src="" alt="Product Image">
+    </div>
+
+    <script>
+        // Array of product image filenames
+        const productImages = [
+            "10x10-Matrix-No-Box.png",  // Ensure these match your uploaded images
+            "2022PatchLockPick.jpeg",
+            "2022PatchScavHunt.jpeg",
+            // Add more images as needed
+        ];
+
+        // Function to rotate images
+        let currentIndex = 0;
+
+        function rotateImage() {
+            // Update the image source with the current product image
+            document.getElementById("productImage").src = productImages[currentIndex];
+            // Move to the next image, looping back to the start if necessary
+            currentIndex = (currentIndex + 1) % productImages.length;
+        }
+
+        // Start rotating images every 4 seconds (4000 milliseconds)
+        setInterval(rotateImage, 4000);
+
+        // Call once initially to display the first image immediately
+        rotateImage();
+    </script>
+</body>
+</html>

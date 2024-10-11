@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .product-display {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 400px; /* Set the max height for uniform size */
+            width: auto;
+            height: auto;
+            border-radius: 8px;
+            object-fit: contain; /* Maintain aspect ratio and ensure the image fits within the container */
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="product-display">
+        <img id="productImage" src="" alt="Product Image">
+    </div>
+
+    <script>
+        // Array of product image filenames
+        const productImages = [
+            "/Images/10x10-Matrix-No-Box.png",
+            "/Images/2022PatchLockPick.jpeg",
+            "/Images/2022PatchScavHunt.jpeg",
+            "/Images/2022SCBeenieWhite.png",
+            "/Images/2022SCshotglass.jpeg",
+            "/Images/CI-ConvertableCrossPick.png",
+            "/Images/CI-EasyLoaderReverseGrip.png",
+            "/Images/CI-EchelonPickSet.png",
+            "/Images/CI-EntrySpecialistBundle.png",
+            "/Images/CI-ErgoCombs.png",
+            "/Images/CI-LichiAM5.jpeg",
+            "/Images/CI-LichiKW1.jpeg",
+            "/Images/CI-LichiSC1.jpeg",
+            "/Images/CI-LichiSC4.jpeg",
+            "/Images/CI-LockboxHingeTool.png",
+            "/Images/CI-LrnLPBun.jpeg",
+            "/Images/CI-NightOpsPatch.png",
+            "/Images/CI-PVCPinningPatch.png",
+            "/Images/CI-PadShims.jpeg",
+            "/Images/CI-PracticeLock.png",
+            "/Images/CI-Replicant.png",
+            "/Images/CI-SSFDIMPLERAKE.png",
+            "/Images/CI-SSFPadlockBypassDriver.png",
+            "/Images/CI-SlimPickings.png",
+            "/Images/CI-TSAKeySet.png",
+            "/Images/CI-TubularPracticeLock.png",
+            "/Images/CI-WardedPickSet.png",
+            "/Images/DesolderWickSolderSuck.jpeg",
+            "/Images/JL-015Flathooks.png",
+            "/Images/JL-015RoundHooks.png",
+            "/Images/JL-022basicset.png",
+            "/Images/JL-inter018v4.png",
+            "/Images/Jl-022starter.png",
+            "/Images/PrecisionLockTweezers.jpeg",
+            "/Images/SAINTCON23BLtee.jpg",
+            "/Images/SAINTCON23LogoPatch.jpeg",
+            "/Images/SC22conbadge.jpg",
+            "/Images/SC23BadgeLifePatch.jpeg",
+            "/Images/SC23Hoodie.jpeg",
+            "/Images/SC23conbadge.jpg",
+            "/Images/SC23kidspack.jpg",
+            "/Images/SC24Hoodie.png",
+            "/Images/SC24_AppSec_Patch.png",
+            "/Images/SC24_HC_Patch.png",
+            "/Images/SC24_Keep_Patch.png",
+            "/Images/Smart65W-Soldering-Iron.jpeg",
+            "/Images/SnipsBlue.jpeg",
+            "/Images/SolderFluxPen.jpeg",
+            "/Images/SolderMat30x20cm.jpeg",
+            "/Images/TactBagSmall.jpg",
+            "/Images/ci-arbiterbypass.jpeg",
+            "/Images/ci-covertcompanion.jpeg",
+            "/Images/ci-covertlubular.jpeg",
+            "/Images/ci-decoders.jpeg",
+            "/Images/ci-fng.jpeg",
+            "/Images/ci-lishi-kw5.jpeg",
+            "/Images/ci-lishi-sc20.jpeg",
+            "/Images/ci-lockbumpkit.jpeg",
+            "/Images/ci-quadcomb.jpeg",
+            "/Images/ice-chameleonultra.jpeg",
+            "/Images/ice-proxmark3.jpeg",
+            "/Images/jl-role.png",
+            "/Images/tinfoilhat.jpeg"
+        ];
+
+        // Function to rotate images
+        let currentIndex = 0;
+
+        function rotateImage() {
+            // Update the image source with the current product image
+            document.getElementById("productImage").src = productImages[currentIndex];
+            // Move to the next image, looping back to the start if necessary
+            currentIndex = (currentIndex + 1) % productImages.length;
+        }
+
+        // Start rotating images every 4 seconds (4000 milliseconds)
+        setInterval(rotateImage, 4000);
+
+        // Call once initially to display the first image immediately
+        rotateImage();
+    </script>
+</body>
+</html>
