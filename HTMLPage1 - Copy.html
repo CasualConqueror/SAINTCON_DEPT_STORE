@@ -139,15 +139,80 @@
             let currentIndex = 0;
 
             // Arrays of product names, images, descriptions, and prices
-        const productNames = ["10 x 10 Mini-Badge Display Board", "2022 SAINTCON Beanie", "2022 SAINTCON Conference Badge", "2023 Family Night Kids Package", "2023 SAINTCON Conference Badge", "CI- Arbiter Bypass Kit", "CI- Convertible Cross Pick", "CI- Covert Companion (SSF)", "CI- Covert Tubular Lock Pick", "CI- Decoder Bundle", "CI- Easy Loader - Reverse Grip", "CI- Echelon Pick Set", "CI- Entry Specialist Bundle", "CI- Ergo Combs", "CI- FNG Kit (See through lock kit)", "CI- Learn Lockpicking Bundle", "CI- Lishi American (AM5)", "CI- Lishi Kwikset (KW1)", "CI- Lishi Kwikset (KW5)", "CI- Lishi Schlage (SC1)", "CI- Lishi Schlage (SC20)", "CI- Lishi Schlage (SC4)", "CI- Lock Bump Starter Kit", "CI- Lockbox Hinge Tool", "CI- Night Ops Patch", "CI- PVC Pinning Patch", "CI- Padlock Shims", "CI- Practice Lock", "CI- Quad Comb Set", "CI- Replicant", "CI- SSF Dimple Rake", "CI- SSF Padlock Bypass Driver", "CI- Slim Pickings (SSF)", "CI- TSA Key Set", "CI- Tubular Practice Lock", "CI- Warded Pick Set", "Cash Drawer", "Desoldering Wick", "Flush Cut Wire Snips", "ICE- Chameleon Ultra (RFID)", "ICE- Proxmark3 RDV4.01 (RFID) Bundle", "JL- 015 Flat Hooks", "JL- 015 Round Hooks", "JL- 018 Basic Set V4", "JL- 018 Intermediate Set V4", "JL- 022 Starter Set V4", "JL- Tool Roll", "Misc Minibadge", "Multi-Purpose Compact Tactical Waist Utility Pouch Drop Bag", "Precision Locking Tweezers", "Previous Years Shirts", "SAINTCON AppSec Co Patch", "SAINTCON BadgeLife Patch", "SAINTCON Hackers Chal Patch", "SAINTCON Keep Patch", "SAINTCON LockPick Co Patch", "SAINTCON ScavHunt Ch Patch", "SAINTCON TIN FOIL HAT", "SAINTCON23 Ball Cap", "SAINTCON23 Hoodie", "SAINTCON23 Patch", "SAINTCON24 Hoodie", "Shot Glass", "Silicone Work Mat 30cm X 20cm", "Solder Flux Pen", "Solder Sucker"];
-
+        const productNames = ["10 x 10 Mini-Badge Display Board",
+            "2022 SAINTCON Beanie",
+            "2022 SAINTCON Conference Badge",
+            "2023 Family Night Kids Package",
+            "2023 SAINTCON Conference Badge",
+            "CI- Arbiter Bypass Kit",
+            "CI- Convertible Cross Pick",
+            "CI- Covert Companion (SSF)",
+            "CI- Covert Tubular Lock Pick",
+            "CI- Decoder Bundle",
+            "CI- Easy Loader - Reverse Grip",
+            "CI- Echelon Pick Set",
+            "CI- Entry Specialist Bundle",
+            "CI- Ergo Combs",
+            "CI- FNG Kit (See through lock kit)",
+            "CI- Learn Lockpicking Bundle",
+            "CI- Lishi American (AM5)",
+            "CI- Lishi Kwikset (KW1)",
+            "CI- Lishi Kwikset (KW5)",
+            "CI- Lishi Schlage (SC1)",
+            "CI- Lishi Schlage (SC20)",
+            "CI- Lishi Schlage (SC4)",
+            "CI- Lock Bump Starter Kit",
+            "CI- Lockbox Hinge Tool",
+            "CI- Night Ops Patch",
+            "CI- PVC Pinning Patch",
+            "CI- Padlock Shims",
+            "CI- Practice Lock",
+            "CI- Quad Comb Set",
+            "CI- Replicant",
+            "CI- SSF Dimple Rake",
+            "CI- SSF Padlock Bypass Driver",
+            "CI- Slim Pickings (SSF)",
+            "CI- TSA Key Set",
+            "CI- Tubular Practice Lock",
+            "CI- Warded Pick Set",
+            "Cash Drawer",
+            "Desoldering Wick",
+            "Flush Cut Wire Snips",
+            "ICE- Chameleon Ultra (RFID)",
+            "ICE- Proxmark3 RDV4.01 (RFID) Bundle",
+            "JL- 015 Flat Hooks",
+            "JL- 015 Round Hooks",
+            "JL- 018 Basic Set V4",
+            "JL- 018 Intermediate Set V4",
+            "JL- 022 Starter Set V4",
+            "JL- Tool Roll",
+            "Misc Minibadge",
+            "Multi-Purpose Compact Tactical Waist Utility Pouch Drop Bag",
+            "Precision Locking Tweezers",
+            "Previous Years Shirts",
+            "SAINTCON AppSec Co Patch",
+            "SAINTCON BadgeLife Patch",
+            "SAINTCON Hackers Chal Patch",
+            "SAINTCON Keep Patch",
+            "SAINTCON LockPick Co Patch",
+            "SAINTCON ScavHunt Ch Patch",
+            "SAINTCON TIN FOIL HAT",
+            "SAINTCON23 Ball Cap",
+            "SAINTCON23 Hoodie",
+            "SAINTCON23 Patch",
+            "SAINTCON24 Hoodie",
+            "Shot Glass",
+            "Silicone Work Mat 30cm X 20cm",
+            "Solder Flux Pen",
+            "Solder Sucker"
+        ];
 
             function rotateImage() {
                 // Update the product name, image, description, and price with the current product
                 document.getElementById("productName").innerHTML = productNames[currentIndex];
-            document.getElementById("productImage").src = productImages[currentIndex];
-            document.getElementById("productDescription").innerHTML = productDescriptions[currentIndex];
-            document.getElementById("productPrice").innerHTML = "Price: " + productPrices[currentIndex];
+                document.getElementById("productImage").src = productImages[currentIndex];
+                document.getElementById("productDescription").innerHTML = productDescriptions[currentIndex];
+                document.getElementById("productPrice").innerHTML = "Price: " + productPrices[currentIndex];
 
             // Move to the next image, looping back to the start if necessary
             currentIndex = (currentIndex + 1) % productImages.length;
