@@ -23,9 +23,15 @@
             border-radius: 8px;
         }
 
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .description {
             line-height: 1.6; /* Increase line spacing */
-            font-size: 16px; /* Adjust font size if needed */
+            font-size: 16px;
             margin-top: 10px;
         }
 
@@ -36,9 +42,11 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Our Products</h1>
     <div class="product-display">
+        <div id="productName" class="name"></div> <!-- Section for product name -->
         <!-- Set an initial placeholder or default image -->
         <img id="productImage" src="images/10x10-Matrix-No-Box.png" alt="Product Image">
         <div id="productDescription" class="description"></div>
@@ -123,26 +131,33 @@
 
         ];
 
-        let currentIndex = 0;
+
 
         // Arrays of images, descriptions, and prices
         const productPrices = ["28.00", "10.00", "10.00", "2.00", "30.00", "74.00", "24.00", "70.00", "50.00", "16.00", "25.00", "70.00", "40.00", "16.00", "9.50", "65.00", "60.00", "60.00", "60.00", "60.00", "70.00", "60.00", "25.00", "14.00", "6.00", "7.00", "15.00", "50.00", "16.00", "90.00", "9.00", "8.00", "55.00", "9.00", "10.00", "14.00", "variable", "4.00", "4.00", "104.00", "204.00", "20.00", "20.00", "20.00", "30.00", "10.00", "10.00", "1.00", "16.00", "4.00", "6.00", "4.00", "4.00", "4.00", "4.00", "4.00", "4.00", "20.00", "20.00", "32.00", "4.00", "32.00", "4.00", "8.00", "4.00", "4.00"]; // Prices for each product
 
-        function rotateImage() {
-            // Update the image source, description, and price with the current product
+            let currentIndex = 0;
+
+            // Arrays of product names, images, descriptions, and prices
+        const productNames = ["10 x 10 Mini-Badge Display Board", "2022 SAINTCON Beanie", "2022 SAINTCON Conference Badge", "2023 Family Night Kids Package", "2023 SAINTCON Conference Badge", "CI- Arbiter Bypass Kit", "CI- Convertible Cross Pick", "CI- Covert Companion (SSF)", "CI- Covert Tubular Lock Pick", "CI- Decoder Bundle", "CI- Easy Loader - Reverse Grip", "CI- Echelon Pick Set", "CI- Entry Specialist Bundle", "CI- Ergo Combs", "CI- FNG Kit (See through lock kit)", "CI- Learn Lockpicking Bundle", "CI- Lishi American (AM5)", "CI- Lishi Kwikset (KW1)", "CI- Lishi Kwikset (KW5)", "CI- Lishi Schlage (SC1)", "CI- Lishi Schlage (SC20)", "CI- Lishi Schlage (SC4)", "CI- Lock Bump Starter Kit", "CI- Lockbox Hinge Tool", "CI- Night Ops Patch", "CI- PVC Pinning Patch", "CI- Padlock Shims", "CI- Practice Lock", "CI- Quad Comb Set", "CI- Replicant", "CI- SSF Dimple Rake", "CI- SSF Padlock Bypass Driver", "CI- Slim Pickings (SSF)", "CI- TSA Key Set", "CI- Tubular Practice Lock", "CI- Warded Pick Set", "Cash Drawer", "Desoldering Wick", "Flush Cut Wire Snips", "ICE- Chameleon Ultra (RFID)", "ICE- Proxmark3 RDV4.01 (RFID) Bundle", "JL- 015 Flat Hooks", "JL- 015 Round Hooks", "JL- 018 Basic Set V4", "JL- 018 Intermediate Set V4", "JL- 022 Starter Set V4", "JL- Tool Roll", "Misc Minibadge", "Multi-Purpose Compact Tactical Waist Utility Pouch Drop Bag", "Precision Locking Tweezers", "Previous Years Shirts", "SAINTCON AppSec Co Patch", "SAINTCON BadgeLife Patch", "SAINTCON Hackers Chal Patch", "SAINTCON Keep Patch", "SAINTCON LockPick Co Patch", "SAINTCON ScavHunt Ch Patch", "SAINTCON TIN FOIL HAT", "SAINTCON23 Ball Cap", "SAINTCON23 Hoodie", "SAINTCON23 Patch", "SAINTCON24 Hoodie", "Shot Glass", "Silicone Work Mat 30cm X 20cm", "Solder Flux Pen", "Solder Sucker"];
+
+
+            function rotateImage() {
+                // Update the product name, image, description, and price with the current product
+                document.getElementById("productName").innerHTML = productNames[currentIndex];
             document.getElementById("productImage").src = productImages[currentIndex];
             document.getElementById("productDescription").innerHTML = productDescriptions[currentIndex];
             document.getElementById("productPrice").innerHTML = "Price: " + productPrices[currentIndex];
 
             // Move to the next image, looping back to the start if necessary
             currentIndex = (currentIndex + 1) % productImages.length;
-        }
+            }
 
-        // Start rotating images every 4 seconds (4000 milliseconds)
-        setInterval(rotateImage, 4000);
+            // Start rotating images every 4 seconds (4000 milliseconds)
+            setInterval(rotateImage, 4000);
 
-        // Call once initially to display the first image, description, and price immediately
-        rotateImage();
+            // Call once initially to display the first image, name, description, and price immediately
+            rotateImage();
     </script>
 </body>
 </html>
