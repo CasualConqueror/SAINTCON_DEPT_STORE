@@ -21,6 +21,19 @@
             height: 300px; /* Set a fixed height */
             object-fit: cover; /* Ensure image scales properly within the box */
             border-radius: 8px;
+        }
+
+        .description {
+            line-height: 1.6; /* Increase line spacing */
+            font-size: 16px; /* Adjust font size if needed */
+            margin-top: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: green;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -29,6 +42,7 @@
         <!-- Set an initial placeholder or default image -->
         <img id="productImage" src="images/10x10-Matrix-No-Box.png" alt="Product Image">
         <div id="productDescription" class="description"></div>
+        <div id="productPrice" class="price"></div> <!-- Section for price -->
     </div>
 
     <script>
@@ -43,7 +57,7 @@
             "10 x 10 Mini-Badge Display Board",
             "2022 SAINTCON Beenie One Size fits most.",
             "2022 SAINTCON Conference Badge",
-            " ",
+            "2023 SAINTCON Kid's Pack",
             "2023 SAINTCON Conference Badge",
             "<p>The Arbiter Bypass Kit includes 8 tools designed to quickly exploit several of the most common lock bypass vectors. It is a “must have” for all first responders, locksmiths, and entry specialists. The Arbiter includes:</p><ul><li>Traveler hook- This long-time favorite is fast, effective, and now redesigned for easy transport in a case.</li><li>Adams Rite Wire- Used to exploit the commonly unshielded keyways of mortise cylinders on commercial doors. </li><li>Commercial Door Hook- Quickly opens the industry standard hookbolt and deadbolt mechanisms found on many commercial doors.</li><li>Padlock Bypass Driver- Used to attack common padlocks with unshielded keyways, enabling you to open the lock as easily as a key.</li><li>0.006” Notched Decoder- Designed for precision decoding and bypassing of wheeled combination locks.</li><li>0.010” Notched Decoder- Not all locks require the more delicate 0.006” Notched Decoder. This thicker version is far more durable, and made specifically for locks with larger gaps.</li><li>Knife tool- Makes short work of many unshielded padlocks with spring-loaded locking lugs.</li><li>Credit Card Latch Slipper- For quickly slipping door latch mechanisms.</li><li>OD Green Tradecraft Case- High-quality, pocket-sized tool case with a quiet magnetic closure. </li></ul><p>This is the best value lock bypass kit on the market. Comparably-priced kits feature half the number of tools, and typically do not include a case.</p>",
             "Our Convertible Cross Pick is, for both its price and for its quality the finest on the market today.The raking attack makes short work of the mechanical overrides found in most hotel convenience safes.Cross locks are also commonly found in Africa, Asia, and South America.It is possible that you may encounter different size keyways with this style lock, for this reason we have included a smaller tensioning collar so that you can pick both large and small keyway locks.",
@@ -109,21 +123,25 @@
 
         ];
 
-        // Function to rotate images and descriptions
         let currentIndex = 0;
 
+        // Arrays of images, descriptions, and prices
+        const productPrices = ["28.00", "10.00", "10.00", "2.00", "30.00", "74.00", "24.00", "70.00", "50.00", "16.00", "25.00", "70.00", "40.00", "16.00", "9.50", "65.00", "60.00", "60.00", "60.00", "60.00", "70.00", "60.00", "25.00", "14.00", "6.00", "7.00", "15.00", "50.00", "16.00", "90.00", "9.00", "8.00", "55.00", "9.00", "10.00", "14.00", "variable", "4.00", "4.00", "104.00", "204.00", "20.00", "20.00", "20.00", "30.00", "10.00", "10.00", "1.00", "16.00", "4.00", "6.00", "4.00", "4.00", "4.00", "4.00", "4.00", "4.00", "20.00", "20.00", "32.00", "4.00", "32.00", "4.00", "8.00", "4.00", "4.00"]; // Prices for each product
+
         function rotateImage() {
-            // Update the image source and description with the current product image and description
+            // Update the image source, description, and price with the current product
             document.getElementById("productImage").src = productImages[currentIndex];
             document.getElementById("productDescription").innerHTML = productDescriptions[currentIndex];
-            //Move to the next image, looping back to the start if necessary
+            document.getElementById("productPrice").innerHTML = "Price: " + productPrices[currentIndex];
+
+            // Move to the next image, looping back to the start if necessary
             currentIndex = (currentIndex + 1) % productImages.length;
         }
 
         // Start rotating images every 4 seconds (4000 milliseconds)
         setInterval(rotateImage, 4000);
 
-        // Call once initially to display the first image and description immediately
+        // Call once initially to display the first image, description, and price immediately
         rotateImage();
     </script>
 </body>
